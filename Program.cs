@@ -33,6 +33,9 @@ namespace _3_Loops
             Console.WriteLine("Starting ForLoopReverseString-----------------------------------------");
             ForLoopReverseString();
             Console.WriteLine("Ending ForLoopReverseString-----------------------------------------");
+            Console.WriteLine("Starting NestedLoops-----------------------------------------");
+            NestedLoops();
+            Console.WriteLine("Ending NestedLoops-----------------------------------------");
         }
 
         static void WhileLoops(){
@@ -103,6 +106,25 @@ namespace _3_Loops
         {
             //again, just practicing, reverse this string but use a for loop this time
             string state = "Alabama";
+
+        }
+
+        static void NestedLoops(){
+            /*
+                See what you can do with this.  This is one of those eye rolling academic / interview type questions.
+                It serves no purpose other than tesing your ability to write loops and think logically.
+
+                Output a pyramid of numbers like so:
+                        1
+                       2 2
+                      3 3 3
+                     4 4 4 4 
+            
+                Output up to the number 4, but have your logic written in such a way that if you were to give it any number, it would handle it
+            */
+        }
+
+        static void DoLoops(){
 
         }
 
