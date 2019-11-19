@@ -36,6 +36,12 @@ namespace _3_Loops
             Console.WriteLine("Starting NestedLoops-----------------------------------------");
             NestedLoops();
             Console.WriteLine("Ending NestedLoops-----------------------------------------");
+            Console.WriteLine("Starting DoLoops-----------------------------------------");
+            DoLoops();
+            Console.WriteLine("Ending DoLoops-----------------------------------------");
+            Console.WriteLine("Starting ContinueAndBreak-----------------------------------------");
+            ContinueAndBreak();
+            Console.WriteLine("Ending ContinueAndBreak-----------------------------------------");
         }
 
         static void WhileLoops(){
@@ -125,12 +131,53 @@ namespace _3_Loops
         }
 
         static void DoLoops(){
+            /*
+                I'm pretty sure I've never written a do loop in my professional career. I'm not entirely sure I've even seen one 
+                in a company's code base... None-the-less, they exist and here's an example below.
 
+                A do loop will execute his body at least once ALWAYS, then it will evaluate it's condition.  This is the opposite of
+                the while and for loops as they evaluate first to decide to jump into the body.
+            */
+
+            var loopValue = 0;
+            do
+            {
+                Console.WriteLine("Do loopValue is " + loopValue);
+                loopValue++;
+            }while(loopValue < 5);
+
+            Console.WriteLine("Do loopValue complete");
         }
 
         static void ContinueAndBreak()
         {
+            /*
+                Finally, we'll talk about continue and break
 
+                break; -sometimes you want to exit a loop before it's condition is met, use this
+                continue; -sometimes you don't want to break a loop, but the current iteration may not be something
+                          you want to process and you want to just skip and go to the next iteration.  use this
+                goto: know it exists, but don't use it.  You will be ridiculed. I'm pretty sure anyone in this place
+                      will shoot your code review out of the sky if they see this in your code.  If they don't, they
+                      should also be ridiculed. Know it exists, but pretend it doesn't.
+
+                Instead of giving you an example, just try them out for yourself.
+
+                Again, purely testing your logic thought.
+
+                Create a loop that calls to get a random number, output the odd numbers you get, add the even numbers you get
+                and exit the loop when their sum reaches 100
+            */
+
+            //use this call to get a random number
+            GetRandomNumber();
+
+
+        }
+
+        private static int GetRandomNumber(){
+            Random random = new Random();
+            return random.Next(1,10);
         }
     }
 }
